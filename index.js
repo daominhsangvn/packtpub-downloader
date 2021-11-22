@@ -83,7 +83,7 @@ const download = (url, options = {}, cb) => {
 }
 
 const normalizeFolderName = (name) => {
-  return slugify(name, {remove: /[*+~.,()'"!:@?\\\/]/g}).substring(0, 50);
+  return slugify(name, {remove: /[*+~.,()\[\]'"!:@?\\\/]/g}).substring(0, 50);
 }
 
 const toPdf = async (content, output, options = {}) => {
